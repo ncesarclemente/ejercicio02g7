@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -40,7 +41,16 @@ public class App extends Application {
         //hbox.setAlignment(Pos.CENTER);
         hbox.setAlignment(Pos.BASELINE_CENTER);
         
-        var scene = new Scene(hbox, 640, 480);
+        Label lblData = new Label("Data");
+        Label lblVentas = new Label("Ventas");
+        Label lblMarketing = new Label("Marketing");
+        Label lblDistribucion = new Label("Distribucion");
+        Label lblCostos = new Label("Costos");
+       
+        VBox vbox =new  VBox (lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
+        
+        
+        var scene = new Scene(vbox, 640, 480);
         stage.setScene(scene);
         stage.setTitle("Grupo 7");
         stage.show();
