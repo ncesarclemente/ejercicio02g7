@@ -42,12 +42,25 @@ public class App extends Application {
         hbox.setAlignment(Pos.BASELINE_CENTER);
         
         Label lblData = new Label("Data");
+        Insets sangriaLabel = new Insets(0,0,0,10);
+        lblData.setStyle("-fx-font-weight:bold");
+        
+        
         Label lblVentas = new Label("Ventas");
+        lblVentas.setPadding(sangriaLabel);
         Label lblMarketing = new Label("Marketing");
+        lblMarketing.setPadding(sangriaLabel);
         Label lblDistribucion = new Label("Distribucion");
+        lblDistribucion.setPadding(sangriaLabel);
         Label lblCostos = new Label("Costos");
+        lblCostos.setPadding(sangriaLabel);
+        
+        Insets sangriaVBox = new Insets (10,0,0,10);
+        
        
         VBox vbox =new  VBox (lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
+        vbox.setPadding(sangriaVBox);
+        vbox.setSpacing(5);
         
         
         var scene = new Scene(vbox, 640, 480);
